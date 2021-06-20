@@ -63,6 +63,7 @@
     margin: 50px auto;
     color: rgb(38, 201, 196) ;
     font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .feature-box a{
@@ -95,7 +96,7 @@
     width: 100%;
     position: absolute;
     display: block;
-    top: 52%;
+    top: 50%;
     z-index: -1;
     opacity: 1;
 }
