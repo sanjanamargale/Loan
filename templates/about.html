@@ -5,12 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="s3.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 's3.css') }}">
     
     <title>about</title>
 </head>
@@ -21,23 +21,23 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="img/logo.png">LOANA</a>
+              <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/logo.png') }}">LOANA</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="img/menu.png">
+                <img src="{{ url_for('static', filename='img/menu.png') }}">
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav"  >
+              <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-end" >
                   <li class="nav-item">
-                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" href="{{ url_for('home') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="predictdemo.html">Eligibilty prediction</a>
+                    <a class="nav-link" href="{{ url_for('predict') }}">Eligibilty prediction</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">About us</a>
+                    <a class="nav-link" href="{{ url_for('about') }}">About us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">Services</a>
+                    <a class="nav-link" href="{{ url_for('about') }}">Services</a>
                   </li>
                 </ul>
               </div>
@@ -50,7 +50,7 @@
         <div class="wrapper">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="img/te.jpeg" class="feature-img">
+                    <img src="{{ url_for('static', filename='img/te.jpeg') }}" class="feature-img">
                 </div>
                 <div class="col-md-6">
                     <div class="feature-box">
@@ -75,7 +75,7 @@
         <div class="card">
             <div class="content">
                 <div class="imgBx">
-                    <img src="img/wave.jpeg" alt="">
+                    <img src="{{ url_for('static', filename='img/wave.jpeg') }}" alt="">
                 </div>
                 <div class="contentBx">
                     <h4>John Nixon</h4>
@@ -91,7 +91,7 @@
         <div class="card">
             <div class="content">
                 <div class="imgBx">
-                    <img src="img/ab.jpeg" alt="">
+                    <img src="{{ url_for('static', filename='img/ab.jpeg') }}" alt="">
                 </div>
                 <div class="contentBx">
                     <h4>Pratik Desai</h4>
@@ -107,7 +107,7 @@
         <div class="card">
             <div class="content">
                 <div class="imgBx">
-                    <img src="img/fe.jpeg" alt="">
+                    <img src="{{ url_for('static', filename='img/fe.jpeg') }}" alt="">
                 </div>
                 <div class="contentBx">
                     <h4>Sanjana Margale</h4>
@@ -124,8 +124,9 @@
     </div>
     <!--------------->
     
-    <img src="img/leaf.jpeg" class="wave-img">
+    <img src="../img/leaf.jpeg" class="wave-img">
     <!--------FOOTER start hora-->
+    
     <div class="footer-basic">
         <footer>
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
